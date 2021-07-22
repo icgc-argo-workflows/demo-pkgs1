@@ -7,7 +7,7 @@ nextflow.enable.dsl = 2
 version = '0.2.0'  // package version
 
 container = [
-    'ghcr.io': 'ghcr.io/icgc-tcga-pancancer/demo-pkgs1.demo-fastqc'
+    'ghcr.io': 'ghcr.io/icgc-argo-workflows/demo-pkgs1.demo-fastqc'
 ]
 default_container_registry = 'ghcr.io'
 /********************************************************************/

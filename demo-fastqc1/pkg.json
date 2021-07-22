@@ -1,6 +1,6 @@
 {
     "name": "demo-fastqc1",
-    "version": "0.1.0",
+    "version": "0.1.0.1",
     "description": "FastQC tool",
     "main": "demo-fastqc1",
     "scripts": {

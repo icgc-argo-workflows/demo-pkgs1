@@ -4,10 +4,10 @@
 /* this block is auto-generated based on info from pkg.json where   */
 /* changes can be made if needed, do NOT modify this block manually */
 nextflow.enable.dsl = 2
-version = '0.2.0'  // package version
+version = '0.2.0.1'
 
 container = [
-    'ghcr.io': 'ghcr.io/icgc-tcga-pancancer/demo-pkgs1.demo-fastqc'
+    'ghcr.io': 'ghcr.io/icgc-argo-workflows/demo-pkgs1.demo-fastqc'
 ]
 default_container_registry = 'ghcr.io'
 /********************************************************************/

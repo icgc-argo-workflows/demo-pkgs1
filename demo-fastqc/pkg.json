@@ -1,6 +1,6 @@
 {
     "name": "demo-fastqc",
-    "version": "0.2.0",
+    "version": "0.2.0.1",
     "description": "FastQC tool",
     "main": "demo-fastqc",
     "scripts": {
@@ -14,14 +14,14 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/icgc-tcga-pancancer/demo-pkgs1.git"
+        "url": "https://github.com/icgc-argo-workflows/demo-pkgs1.git"
     },
     "container": {
         "registries": [
             {
                 "registry": "ghcr.io",
                 "type": "docker",
-                "org": "icgc-tcga-pancancer",
+                "org": "icgc-argo-workflows",
                 "default": true
             }
         ]
@@ -35,6 +35,6 @@
         }
     ],
     "license": "MIT",
-    "bugReport": "https://github.com/icgc-tcga-pancancer/demo-pkgs1/issues",
-    "homepage": "https://github.com/icgc-tcga-pancancer/demo-pkgs1#readme"
+    "bugReport": "https://github.com/icgc-argo-workflows/demo-pkgs1/issues",
+    "homepage": "https://github.com/icgc-argo-workflows/demo-pkgs1#readme"
 }

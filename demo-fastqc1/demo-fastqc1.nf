@@ -4,10 +4,10 @@
 /* this block is auto-generated based on info from pkg.json where   */
 /* changes can be made if needed, do NOT modify this block manually */
 nextflow.enable.dsl = 2
-version = '0.2.0.1'
+version = '0.1.0'  // package version
 
 container = [
-    'ghcr.io': 'ghcr.io/icgc-argo-workflows/demo-pkgs1.demo-fastqc'
+    'ghcr.io': 'ghcr.io/icgc-argo-workflows/demo-pkgs1.demo-fastqc1'
 ]
 default_container_registry = 'ghcr.io'
 /********************************************************************/
@@ -28,7 +28,7 @@ params.input_file = ""
 params.output_pattern = "*.html"  // fastqc output html report
 
 
-process demoFastqc {
+process demoFastqc1 {
   container "${params.container ?: container[params.container_registry ?: default_container_registry]}:${params.container_version ?: version}"
   publishDir "${params.publish_dir}/${task.process.replaceAll(':', '_')}", mode: "copy", enabled: "${params.publish_dir ? true : ''}"
 
@@ -47,9 +47,16 @@ process demoFastqc {
     """
     mkdir -p output_dir
 
-    demo-fastqc.py \
+    demo-fastqc1.py \
       -i ${input_file} \
       -o output_dir
 
     """
+}
+
+
+workflow {
+  demoFastqc1(
+    file(params.input_file)
+  )
 }

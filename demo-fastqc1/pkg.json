@@ -1,8 +1,8 @@
 {
-    "name": "demo-fastqc",
-    "version": "0.2.0.1",
+    "name": "demo-fastqc1",
+    "version": "0.1.0",
     "description": "FastQC tool",
-    "main": "demo-fastqc",
+    "main": "demo-fastqc1",
     "scripts": {
         "test": "wfpm test"
     },

@@ -4,10 +4,10 @@
 /* this block is auto-generated based on info from pkg.json where   */
 /* changes can be made if needed, do NOT modify this block manually */
 nextflow.enable.dsl = 2
-version = '0.2.0.1'
+version = '0.1.0'  // package version
 
 container = [
-    'ghcr.io': 'ghcr.io/icgc-argo-workflows/demo-pkgs1.demo-fastqc'
+    'ghcr.io': 'ghcr.io/icgc-argo-workflows/demo-pkgs1.demo-fastqc1'
 ]
 default_container_registry = 'ghcr.io'
 /********************************************************************/
@@ -21,7 +21,7 @@ params.container = ""
 params.input_file = ""
 params.expected_output = ""
 
-include { demoFastqc } from '../demo-fastqc'
+include { demoFastqc1 } from '../demo-fastqc1'
 
 Channel
   .fromPath(params.input_file, checkIfExists: true)
@@ -57,12 +57,12 @@ workflow checker {
     expected_output
 
   main:
-    demoFastqc(
+    demoFastqc1(
       input_file
     )
 
     file_smart_diff(
-      demoFastqc.out.output_file,
+      demoFastqc1.out.output_file,
       expected_output
     )
 }
